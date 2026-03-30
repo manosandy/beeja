@@ -1,0 +1,8 @@
+FROM python:3.9 -slim-buster
+WORKDIR ./app
+coppy requirments.txt
+RUN pip install-r requirment.txt
+copy aap/.
+copy run.py ./app
+EXPOSE 5000
+CMD ["Python","run.py"]
